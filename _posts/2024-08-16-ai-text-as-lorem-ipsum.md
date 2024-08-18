@@ -2,7 +2,7 @@
 title: AI generated text as lorem ipsum
 ---
 
-While working on something that neede a few paragraphs of descriptive text, I used chatGPT to generate this text.
+While working on something that needed a few paragraphs of descriptive text, I used chatGPT to generate this text.
 
 As expected, the text wasn't really what I was hoping for. As you probably know, AI-generated text often sounds / reads as something contrived or artificial.
 
