@@ -2,7 +2,7 @@
 title: Blog
 ---
 
-This is a place where I document things I've learned, tricks I've discovered, or problems I've solved.
+This is an alternative to maintaining a Social Media presence. A place where I document things I've learned, tricks I've discovered, or problems I've solved.
 
 Mostly a notes-to-self kind of collection, for future reference. Don't expect anything profound.
 
