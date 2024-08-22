@@ -1,4 +1,4 @@
-name: Send a toot to Mastodon
+name: Send a post to Mastodon
 
 on:
   push:
