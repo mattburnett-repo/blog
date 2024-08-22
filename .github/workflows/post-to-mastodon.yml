@@ -31,10 +31,11 @@ jobs:
           # This is the message that will be sent to Mastodon, override it with your own message if you want
           message: "Here is a new blog post:"
           # Base URL of your blog post where your posts are hosted
-          base_blog_url: "https://github.com/mattburnett-repo/blog/tree/main/_posts"
+          base_blog_url: "https://github.com/mattburnett-repo/blog/tree/main/"
+          base_directory: "_posts/"
           # access token of your Mastodon account
           access_token: ${{ secrets.MASTODON_ACCESS_TOKEN }}
           # Mastodon instance URL, default is fosstodon.org
-          host: "fosstodon.org"
+          host: "mastodon.social"
           port: "443"
           api: "api/v1"
