@@ -2,6 +2,11 @@
 title: Media Query Breakpoint Reference
 ---
 ### Common Media Query breakpoints:
+
+This is source [here](https://github.com/gitdagray/css_course/blob/main/17_lesson/notes.md?plain=1)
+
+Need to work out theming issues to fix the formatting mess.
+
 | Breakpoint | Description |
 | -------- | ---------- |
 | < 481px | Mobile devices |
