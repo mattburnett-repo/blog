@@ -3,10 +3,6 @@ title: Media Query Breakpoint Reference
 ---
 ### Common Media Query breakpoints:
 
-This is source [here](https://github.com/gitdagray/css_course/blob/main/17_lesson/notes.md?plain=1)
-
-Need to work out theming issues to fix the formatting mess.
-
 | Breakpoint | Description |
 | -------- | ---------- |
 | < 481px | Mobile devices |
@@ -16,6 +12,7 @@ Need to work out theming issues to fix the formatting mess.
 | 1201px and greater | Extra large screens, TV |
 
 ### Bootstrap breakpoints:
+
 | Breakpoint | Description |
 | -------- | ---------- |
 | < 576px | xs |
@@ -26,6 +23,7 @@ Need to work out theming issues to fix the formatting mess.
 | >=1400px | 2xl |
 
 ### Tailwind breakpoints:
+
 | Breakpoint | Description |
 | -------- | ---------- |
 | < 640px | xs |
