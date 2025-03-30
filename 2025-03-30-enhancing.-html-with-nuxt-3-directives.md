@@ -1,0 +1,3 @@
+- while implementing security measures to a project I'm working on, I came across an interesting trick involving directive that I want to share.
+- It's possible to create and implement directives in a way that doesn't require manual addition of directives to all elements that you want to affect.
+- Automatically add directives to elements based on type, text <input> in this case.
