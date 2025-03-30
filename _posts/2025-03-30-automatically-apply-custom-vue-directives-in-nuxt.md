@@ -22,10 +22,12 @@ But what happens when the app is large and has too many input elements to easily
 
 These are extra things to plan for. It would be more effective to build this filtering functionality into the input elements from the start. That way you can be reasonably confident that objectionale content will be removed.
 
-### Pseudocode
-First, some pseudocode to set the stage. The important stuff comes afterwards.
+### Code for the directive
+Here is some sample directive code; this is an example of what a directive would look like in Vue 3. 
 
-#### file: directives/exampleDirective.ts
+It's ok to skim over this example. The 'automatically apply to elements' part comes afterwards.
+
+#### file: directives/filter.ts
 ```typescript
 interface FilteredHTMLElement extends HTMLElement {
   _filterHandler: (event: Event) => void;
@@ -50,7 +52,6 @@ export default {
       }
     };
 
-    // List of valid text input types.
     const validTextInputs: string[] = [
       "text",
       "email",
@@ -60,7 +61,6 @@ export default {
       "url",
     ];
 
-    // Attach the listener only if the element is a text input or a textarea.
     if (
       (el.tagName === "INPUT" &&
         validTextInputs.includes(
@@ -71,18 +71,99 @@ export default {
       el.addEventListener("input", filter);
     }
 
-    // Save filter function to remove event listener later.
     (el as FilteredHTMLElement)._filterHandler = filter;
   },
   beforeUnmount(el: FilteredHTMLElement) {
-    // Clean up event listener when directive is removed.
     if (el._filterHandler) {
       el.removeEventListener("input", el._filterHandler);
     }
   },
 };
 ```
+ What's important here is that we attach an `input` event listener, with the `filter` method, to the element:
+```typescript
+    if (
+      (el.tagName === "INPUT" &&
+        validTextInputs.includes(
+          el.getAttribute("type")?.toLowerCase() || ""
+        )) ||
+      el.tagName === "TEXTAREA"
+    ) {
+      el.addEventListener("input", filter);
+    }
+```
 
-- Plugin / programmatic application here.
+At this point, hypothetically, a developer would be able to apply the directive `v-filter` on an HTML Input or Textarea element.
+
+```javascript
+<input type="text" v-filter></input>
+```
+Just adding a `v-filter` directive to an input element is an easy solution if there are only a few input elements in the app. But when there is a large number elements, or when input elements are created dynamically, it gets more difficult to keep track of things.
+
+It would be easier (and more effective) if the app could just add the directive automatically.
+
+### Code for the plugin
+Here is some sample code for a Nuxt 3 plugin. This is where the 'automatically apply to elements' part happens.
+
+#### file: plugins/filter.ts
+```typescript
+import filteredirective from "~/directives/filter";
+
+interface filteredHTMLElement extends HTMLElement {
+  _filterHandler: (event: Event) => void;
+}
+
+export default defineNuxtPlugin((nuxtApp) => {
+  nuxtApp.vueApp.directive("filter", filteredirective);
+
+  if (import.meta.server) {
+    return;
+  }
+
+  const applyfilteredirective = () => {
+    document.querySelectorAll("input[type='text'], textarea").forEach((el) => {
+      if (!el.hasAttribute("data-filtered")) {
+        filteredirective.mounted(el as filteredHTMLElement);
+        el.setAttribute("data-filtered", "true"); // prevent duplicate applications
+      }
+    });
+  };
+
+  window.addEventListener("load", applyfilteredirective);
+
+  const observer = new MutationObserver(() => {
+    applyfilteredirective();
+  });
+
+  observer.observe(document.body, { childList: true, subtree: true });
+}); 
+```
+
+This is the function that 'automatically applies the directive to the elements'. It uses the `mounted` method from the directive:
+```typescript
+  const applyfilteredirective = () => {
+    document.querySelectorAll("input[type='text'], textarea").forEach((el) => {
+      if (!el.hasAttribute("data-filtered")) {
+        filteredirective.mounted(el as filteredHTMLElement);
+        el.setAttribute("data-filtered", "true"); // prevent duplicate applications
+      }
+    });
+  };
+```
+
+The function to apply the directive happens when the page loads:
+```typescript
+window.addEventListener("load", applyfilteredirective);
+```
+
+Dynamically-created elements (eg a new item in a To Do list) receive the directive here:
+```typescript
+  const observer = new MutationObserver(() => {
+    applyfilteredirective();
+  });
+
+  observer.observe(document.body, { childList: true, subtree: true });
+```
 
 ### Outro
+Directives enable the ability to apply complex functionality to elements in Vue. By combining a Vue directive with a Nuxt plugin, you can automatically apply a given directive to any given number of elements and be reasonably certain that the directive will be consistently applied thoughout the application. This greatly simplifies the effort required to implement custom functionality in an app.
