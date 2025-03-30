@@ -96,9 +96,9 @@ At this point, hypothetically, a developer would be able to apply the directive 
 ```javascript
 <input type="text" v-filter></input>
 ```
-Just adding a `v-filter` directive to an input element is an easy solution if there are only a few input elements in the app. But when there is a large number elements, or when input elements are created dynamically, it gets more difficult to keep track of things.
+Just adding a `v-filter` directive to an input element is an easy solution if there are only a few input elements in the app. But when there is a large number of elements, or when input elements are created dynamically, it gets more difficult to keep track of things.
 
-It would be easier (and more effective) if the app could just add the directive automatically. ONe way to do this is with a plugin.
+It would be easier (and more effective) if the app could just add the directive automatically. One way to do this is with a plugin.
 
 ### Code for the plugin
 Here is some sample code for a Nuxt 3 plugin. This is where the 'automatically apply to elements' part happens.
@@ -149,7 +149,7 @@ This is the function that 'automatically applies the directive to the elements'.
   };
 ```
 
-The function to apply the directive happens when the page loads:
+The function to apply the directive is called when the page loads:
 ```typescript
 window.addEventListener("load", applyfilteredDirective);
 ```
@@ -164,4 +164,4 @@ Dynamically-created elements (eg a new item in a To Do list) receive the directi
 ```
 
 ### Outro
-Directives enable the ability to apply complex functionality to HTML elements in Vue. By combining a Vue directive with a Nuxt plugin, you can automatically apply a given directive to any given number of elements and be reasonably certain that the directive will be consistently applied thoughout the application. This greatly simplifies the effort required to implement custom functionality in an app.
+Directives enable the ability to apply complex functionality to HTML elements in Vue. By combining a Vue directive with a Nuxt plugin, you can automatically apply a given directive to a group of realted elements and be reasonably certain that the directive will be consistently applied thoughout the application. This greatly simplifies the effort required to implement custom functionality in an app.
