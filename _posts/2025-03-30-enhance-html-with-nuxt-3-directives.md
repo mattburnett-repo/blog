@@ -12,3 +12,7 @@ title: Enhance HTML with Nuxt 3 directives
 Here we will quickly go over what a directive looks like, and then we will describe how to automatically apply this directive based on the target element type.
 
 This is mostly written in pseudo-code format. The purpose here is to show the idea and to keep the code listings short. You are free to implement this idea however you like.
+
+- Directive pseudo-code here.
+
+- Plugin / programmatic application here.
