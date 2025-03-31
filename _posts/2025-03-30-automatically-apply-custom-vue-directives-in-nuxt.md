@@ -164,4 +164,4 @@ Dynamically-created elements (eg a new item in a To Do list) receive the directi
 ```
 
 ### Outro
-Directives enable the ability to apply complex functionality to HTML elements in Vue. By combining a Vue directive with a Nuxt plugin, you can automatically apply a given directive to a group of realted elements and be reasonably certain that the directive will be consistently applied thoughout the application. This greatly simplifies the effort required to implement custom functionality in an app.
+Directives enable the ability to apply complex functionality to HTML elements in Vue. By combining a Vue directive with a Nuxt plugin, you can automatically apply a given directive to a group of related elements and be reasonably certain that the directive will be consistently applied thoughout the application. This greatly simplifies the effort required to implement custom functionality in an app.
