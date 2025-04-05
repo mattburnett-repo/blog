@@ -5,5 +5,5 @@ title: Blog
 author: Matt Burnett
 description: Notes to self and related infos. Don''t expect anything profound.
 url: https://mattburnett-repo.github.io/blog/
-logo: assets/laddericon_01.png
+logo: /assets/laddericon_01.png
 github_username: mattburnett-repo
