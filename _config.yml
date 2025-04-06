@@ -7,3 +7,10 @@ description: Notes to self and related infos. Don''t expect anything profound.
 url: https://mattburnett-repo.github.io/blog/
 logo: /assets/ladderIcon_01.png
 github_username: mattburnett-repo
+
+defaults:
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
