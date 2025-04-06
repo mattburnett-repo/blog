@@ -14,3 +14,12 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      actions:
+        - label: "Learn More"
+          icon: github
+          url: "http://url-goes-here.com"
+        - label: "Download"
+          icon: download
+          url: "http://url-goes-here.com"
+      image: /assets/linkedInBannerImage.png
+      comments: false
