@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Automatically Apply Custom Vue Directives in Nuxt 3
 ---
 ### Intro
