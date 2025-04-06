@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.alt_title | default: site.title }}</title>
+</head>
+<body>
+  <article>
+    <header>
+      <h1>{{ page.alt_title }}</h1>
+      <h2>{{ page.sub_title }}</h2>
+      <p>{{ page.introduction }}</p>
+      {% if page.image %}
+        <img src="{{ page.image }}" alt="Hero Image">
+      {% endif %}
+    </header>
+
+    <div class="content">
+      {{ content }}
+    </div>
+
+    <footer>
+      {% if page.author %}
+        <p>Written by {{ page.author.name }} <a href="https://twitter.com/{{ page.author.twitter }}">Twitter</a></p>
+      {% endif %}
+      {% if page.actions %}
+        <ul>
+          {% for action in page.actions %}
+            <li><a href="{{ action.url }}">{{ action.label }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+      {% if page.comments %}
+        <!-- Add your comment system here -->
+      {% endif %}
+    </footer>
+  </article>
+</body>
+</html>
