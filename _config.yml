@@ -14,6 +14,10 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      alt_title: "Hope This Helps"
+      sub_title: "The name says it all"
+      introduction: |
+        Basically Basic is a Jekyll theme meant to be a substitute for the default --- [Minima](https://github.com/jekyll/minima). Conventions and features found in Minima are fully supported by **Basically Basic**.
       actions:
         - label: "Learn More"
           icon: github
@@ -22,4 +26,8 @@ defaults:
           icon: download
           url: "http://url-goes-here.com"
       image: /assets/linkedInBannerImage.png
+      author:
+        name: John Doe
+        twitter: johndoetwitter
       comments: false
+
