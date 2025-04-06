@@ -13,7 +13,7 @@ defaults:
       path: "_posts"
       type: "posts"
     values:
-      layout: "post"
+      layout: "default"
       alt_title: "Hope This Helps"
       sub_title: "The name says it all"
       introduction: |
