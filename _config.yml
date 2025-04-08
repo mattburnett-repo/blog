@@ -1,6 +1,6 @@
-# theme: minima
+theme: minima
 lang: en-US
-remote_theme: "mmistakes/jekyll-theme-basically-basic@1.4.5"
+# remote_theme: "mmistakes/jekyll-theme-basically-basic@1.4.5"
 title: Hope This Helps
 author: Matt Burnett
 description: Notes to self and related infos. Don''t expect anything profound.
