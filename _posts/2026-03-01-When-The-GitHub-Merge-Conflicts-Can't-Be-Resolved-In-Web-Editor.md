@@ -2,15 +2,14 @@
 title: When The GitHub Merge Conflicts Are Too Big To Resolve In The Web Editor
 ---
 
-Sometimes if you push a bunch of commits to a repo and then try to make a PR for them, GitHub will say something like "The merge conflicts are too big to edit on the web." 
+**(We're assuming that you're working in a branch called 'updates')**
+
+Sometimes if you push a bunch of commits to a repo and then try to make a PR for them, there will be too many merge conflicts. GitHub will say something like "The merge conflicts are too big to edit on the web." 
 or "Use the CLI to resolve merge conflicts."
 
 GitHub is saying the branch you’re trying to merge (e.g. updates) has diverged from the target branch (e.g. main), and there are conflicting changes. You need to bring the target branch into yours and fix conflicts locally, then push.
 
-
 Do this on your machine:
-
-**We're assuming that you're working in a branch called 'updates'**
 
 - Fetch the latest from GitHub
   ``` bash
