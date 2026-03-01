@@ -28,6 +28,7 @@ Do this on your machine:
 - Run 'git status' to see conflicted files.
   
 - Open each file, remove the <<<<<<<, =======, >>>>>>> markers and keep the correct code.
+- Don't.Forget.To.Save.The.Files.
 - Then:
   ``` bash
     git add .
