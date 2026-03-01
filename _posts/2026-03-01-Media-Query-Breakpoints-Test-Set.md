@@ -9,6 +9,7 @@ I added these as 'devices' in the responsive display part in the dev tools for C
 These are not definitive settings, but rather serve as a starting point when setting up responsive design.
 
 ### Recommended test dimensions (width × height)
+
 | Breakpoint | Width | Height | Use for |
 |------------|-------|--------|----------|
 | bp-01-xl | 1400px | 788px | Large desktop |
