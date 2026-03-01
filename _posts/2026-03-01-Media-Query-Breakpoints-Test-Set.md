@@ -10,7 +10,7 @@ These are not definitive settings, but rather serve as a starting point when set
 
 ### Recommended test dimensions (width × height)
 
-| Breakpoint | Width | Height | Use for |
+| Breakpoint/device | Width | Height | Use for |
 |------------|-------|--------|----------|
 | bp-01-xl | 1400px | 788px | Large desktop |
 | bp-02-lg | 1100px | 619px | Desktop |
