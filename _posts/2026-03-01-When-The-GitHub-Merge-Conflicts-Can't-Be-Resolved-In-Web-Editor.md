@@ -13,7 +13,7 @@ This means you
 - go to your working branch (again, for our example here it's called 'updates')
 - get the 'target' branch (usually called 'main')
 - merge the 'target' into your working branch
-- list all of the conflicted files and fix them
+- list all of the conflicted files and fix them. This often is a simple click of "Accept current change".
 - commit and re-push
 
 Here's how:
