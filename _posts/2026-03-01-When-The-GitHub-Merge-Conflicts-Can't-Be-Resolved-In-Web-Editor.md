@@ -9,7 +9,14 @@ or "Use the CLI to resolve merge conflicts."
 
 GitHub is saying the branch you’re trying to merge (e.g. updates) has diverged from the target branch (e.g. main), and there are conflicting changes. You need to bring the target branch into yours and fix conflicts locally, then push.
 
-Do this on your machine:
+This means you 
+- go to your working branch (again, for our example here it's called 'updates')
+- get the 'target' branch (usually called 'main')
+- merge the 'target' into your working branch
+- list all of the conflicted files and fix them
+- commit and re-push
+
+Here's how:
 
 - Fetch the latest from GitHub
   ``` bash
