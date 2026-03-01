@@ -1,5 +1,5 @@
 ---
-title: Media Query Breakpoint Test set
+title: Media Query Breakpoint Test Set
 ---
 
 Recently I settled on a set of breakpoints / display dimensions to use when starting on responsive design for a project.
