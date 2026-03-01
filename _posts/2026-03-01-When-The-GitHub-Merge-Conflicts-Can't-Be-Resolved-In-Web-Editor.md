@@ -13,7 +13,7 @@ This means you
 - go to your working branch (again, for our example here it's called 'updates')
 - get the 'target' branch (usually called 'main')
 - merge the 'target' into your working branch
-- list all of the conflicted files and fix them. This often is a simple click of "Accept current change".
+- list all of the conflicted files and fix them.
 - commit and re-push
 
 Here's how:
@@ -33,15 +33,19 @@ Here's how:
 
 - Run 'git status' to see conflicted files.
   
-- Open each file, remove the <<<<<<<, =======, >>>>>>> markers and keep the correct code.
+- Open each file, remove the <<<<<<<, =======, >>>>>>> markers and keep the correct code.  This often is a simple click of "Accept current change", but make sure you're removing the code that should go away, and keeping the code that should stay.
+  
 - Don't.Forget.To.Save.The.Files.
+  
 - Then:
   ``` bash
     git add .
     git commit -m "Resolve merge conflicts with main"
   ```
+  
 - Push your branch
   ``` bash
    git push origin updates
   ```
+  
 - After that, refresh the PR on GitHub; the conflict message should be gone and you should be able to complete the PR.
