@@ -1,6 +1,10 @@
+---
+title: Conversation with ChatGPT -- AI, the Pentagon, and Targeting Workflows
+---
 
+I was curious about what ChatGPT had to say about the current issues surrounding AI acqusition by the US Department of Defense, so I asked. 
 
-# Conversation with ChatGPT: AI, the Pentagon, and Targeting Workflows
+ChatGPT provided some context that I found useful. Here's what happened:
 
 ## User
 Hi chatbot. What do you think about the current controversy regarding your use by the US Department of Defense?
