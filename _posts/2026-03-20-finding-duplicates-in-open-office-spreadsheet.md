@@ -1,5 +1,5 @@
 ---
-title: Simple Way to Find Dupicates in OpenOffice Calc spreadsheets
+title: Simple Way to Find Duplicates in OpenOffice Calc spreadsheets
 ---
 
 ### How to Highlight Duplicate Entries in an OpenOffice Calc Column
