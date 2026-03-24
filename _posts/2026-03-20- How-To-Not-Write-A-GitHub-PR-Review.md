@@ -6,7 +6,7 @@ Part of the job requires reviewing PRs. I always go out of my way to be supporti
 
 But after a recent, particularly challenging review I wondered what it would be like to go the other direction: Condescending, dismissive, arrogant, and so on **(I strongly advise against this!)**.
 
-Who better to write such a review as the condescening, dismissive and arrogant character Q, from Star Trek: The Next Generation?
+Who better to write such a review than the condescening, dismissive and arrogant character Q, from Star Trek: The Next Generation?
 
 So here you go:
 
