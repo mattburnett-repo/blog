@@ -28,7 +28,7 @@ It does not automate the entire job application process. An automated job applic
 I've run this in ChatGPT and Cursor/Claude. In both cases the output is reasonable, but as already mentioned, can be modified in-prompt.
 
 ### TL;DR
-Here's the prompt. It is tailored for the DC job market, but you could easily adapt it to your locale:
+Here's the prompt:
 
 ```
 # ChatGPT Cover Letter Generator – Auto-Execute Prompt (Updated)
